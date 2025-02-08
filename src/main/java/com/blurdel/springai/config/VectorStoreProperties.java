@@ -7,7 +7,7 @@ import org.springframework.core.io.Resource;
 import java.util.List;
 
 @Configuration
-@ConfigurationProperties("sfg.aiapp")
+@ConfigurationProperties(prefix = "sfg.aiapp")
 public class VectorStoreProperties {
 
     private String vectorStorePath;
