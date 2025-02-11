@@ -39,7 +39,7 @@ public class OpenAIServiceImpl implements OpenAIService {
         Message sysMsg = sysMsgPT.createMessage();
 
         List<Document> documents = vectorStore.similaritySearch(
-                SearchRequest.builder().query(question.question()).topK(5).build());
+                SearchRequest.builder().query(question.question()).topK(6).build());
         List<String> contentList = documents.stream().map(Document::getContent).toList();
 
         PromptTemplate pt = new PromptTemplate(ragPromptTemplate);
